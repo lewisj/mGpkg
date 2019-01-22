@@ -6,7 +6,7 @@ Most broader uses of marine vector geospatial data (mostly ENC) tend to group by
 
 example:
 ```
-Table name = group1
+Table name = group_1
  id  |  obj
 -----+--------
   89 | LNDARE
@@ -14,7 +14,7 @@ Table name = group1
  101 | DEPARE
  103 | UNSARE
 ```
-could be the representation of some group1 features within a single group1 table. This is a good arrangement because it allows for themes to be constructed within individual profiles of spcific product specifications.
+Could be the representation of some group 1 features within a single group_1 table. In ENCs Group 1 features are all the features required to create a skin of the earth or a continous coverage of polygons. This is a good arrangement because it allows for themes to be constructed within individual profiles of specific product specifications.
 
 ## Feature Attribution
 It should be possible to hold feature attribution inline within a single row of a feature table. This should allow for either a single column holding all attribution or multiple columns holding one attribute per column with the name of the column the name of the attribute. We should use JSON to represent complex attribution - Question: are there better  representations which are more client (i.e. GIS) friendly?
@@ -29,7 +29,7 @@ e.g.
  101 | DEPARE | {"DRVAL1": "50", "DRVAL2": "100"}
  103 | UNSARE | {"INFORM": "10.6"}
 ```
-(non-projected)
+(non-amalgamated)
 
 ```
  id  |  obj   | drval1 | drval2 | inform
@@ -40,7 +40,7 @@ e.g.
  101 | DEPARE |     50 |    100 |
  103 | UNSARE |        |        | 10.6
 ```
-(projected)
+(amalgamated)
 
 are both valid representations of features within an aggregated group1 table. These 
 
